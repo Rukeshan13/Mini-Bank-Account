@@ -1,0 +1,24 @@
+class BankAccount:
+    def __init__(self):
+        self.balance = 0
+        print("Welcome to the Bank Machine.")
+
+    def deposit(self):
+        amount = float(input("Enter amount to be Deposited:"))
+        self.balance += amount
+        print("\n Amount Deposied:", amount)
+
+    def withdraw(self):
+        amount = float(input("Enter amount to be withdrawan:"))
+        if self.balance >= amount:
+            self.balance -= amount
+            print("\n Youw Withdrawn :", amount)
+        else:
+            print("\n Insufficient Balance.")
+
+    def display(self):
+        print("\n Net Availabale Balance= ", self.balance)
+account = BankAccount()
+account.deposit()
+account.withdraw()
+account.display()
